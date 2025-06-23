@@ -2,15 +2,14 @@ const data = [];
 const rowsPerPage = 5;
 let currentPage = 1;
 
-// Gerar dados fictícios
 for (let i = 1; i <= 50; i++) {
   data.push({
     id: i,
-    nome: `Usuário ${i}`,
-    email: `usuario${i}@email.com`,
-    telefone: `+55 (11) 9${1000 + i}-0000`,
-    endereco: `Rua ${i}`,
-    cidade: `Cidade ${i}`,
+    codeip: `PIE-NSSS-IHRSS-01`,
+    categoria: `IHRSS`,
+    origem: `NSSS`,
+    descricao: `Feedwater system`,
+    se: `SE-2`,
   });
 }
 
@@ -26,11 +25,11 @@ function renderTable() {
     const row = `
       <tr>
         <td>${user.id}</td>
-        <td>${user.nome}</td>
-        <td>${user.email}</td>
-        <td>${user.telefone}</td>
-        <td>${user.endereco}</td>
-        <td>${user.cidade}</td>
+        <td>${user.codeip}</td>
+        <td>${user.categoria}</td>
+        <td>${user.origem}</td>
+        <td>${user.descricao}</td>
+        <td>${user.se}</td>
       </tr>
     `;
     tableBody.innerHTML += row;
@@ -53,5 +52,4 @@ function prevPage() {
   }
 }
 
-// Inicializar
 renderTable();
