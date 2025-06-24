@@ -24,7 +24,7 @@
                 <ul>
                     <li><a href="eip.html">EIP</a></li>
                     <li><a href="componentes.html">Componentes</a></li>
-                    <li><a href="causa-de-falha.html">Causa de Falha</a></li>
+                    <li><a href="causa-de-falha.html">Causas de Falha</a></li>
                     <li><a href="modos-de-falha.html">Modos de Falha</a></li>
                 </ul>
                 <li><a href="">Fmea</a></li>
@@ -37,22 +37,24 @@
                 <button class="modalBtn">Novo Cadastro</button>
             </div>
 
-            <table id="userTable">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Modo de Falha</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                    <!-- Dados preenchidos por JavaScript -->
-                </tbody>
-            </table>
+            <div class="table-container">
+                <table id="userTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Modo de Falha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Dados preenchidos por JavaScript -->
+                    </tbody>
+                </table>
 
-            <div class="pagination">
-                <button onclick="prevPage()">Anterior</button>
-                <span id="pageNumber">Página 1</span>
-                <button onclick="nextPage()">Próxima</button>
+                <div class="pagination">
+                    <button onclick="prevPage()">Anterior</button>
+                    <span id="pageNumber">Página 1</span>
+                    <button onclick="nextPage()">Próxima</button>
+                </div>
             </div>
         </main>
     </div>

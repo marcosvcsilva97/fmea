@@ -1,5 +1,5 @@
 const data = [];
-const rowsPerPage = 5;
+const rowsPerPage = 10;
 let currentPage = 1;
 
 for (let i = 1; i <= 50; i++) {
