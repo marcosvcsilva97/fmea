@@ -33,7 +33,11 @@
         <main>
             <div class="header">
                 <span>EIP</span>
-                <button class="modalBtn">Novo Cadastro</button>
+                <button class="modalBtn BtnNew">Novo Cadastro</button>
+            </div>
+
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Pesquisar...">
             </div>
 
             <div class="table-container">
@@ -46,6 +50,7 @@
                             <th>Origem</th>
                             <th>Descrição</th>
                             <th>SE</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody id="tableBody">
@@ -60,7 +65,8 @@
                 </div>
             </div>
 
-            <div class="modal">
+            <!-- Novo Cadastro -->
+            <div class="modal modal-new">
                 <div class="content">
                     <header class="modal-header">
                         <h1>NOVO CADASTRO</h1>
@@ -97,10 +103,52 @@
                     </div>
                     <div class="modal-footer">
                         <button>Enviar</button>
+                        <!-- <button class="BtnCancel">Cancelar</button> -->
                     </div>
                 </div>
             </div>
 
+            <!-- Editar Cadastro -->
+            <div class="modal modal-edit">
+                <div class="content">
+                    <header class="modal-header">
+                        <h1>EDITAR CADASTRO</h1>
+                    </header>
+                    <div class="modal-container">
+                        <form action="" method="post">
+                            <div>
+                                <label for="codeip">Cod EIP:</label>
+                                <input type="text" id="codeip" />
+                            </div>
+                            <div>
+                                <label for="categoria">Categoria:</label>
+                                <input type="text" id="categoria" />
+                            </div>
+                            <div>
+                                <label for="origem">Origem:</label>
+                                <input type="text" id="origem" />
+                            </div>
+                            <div>
+                                <label for="descricao">Descrição:</label>
+                                <input type="text" id="descricao" />
+                            </div>
+                            <div>
+                                <label for="se">SE:</label>
+                                <select name="se" id="se">
+                                    <option value="se1">SE-1</option>
+                                    <option value="se2">SE-2</option>
+                                    <option value="se3">SE-3</option>
+                                    <option value="se4">SE-4</option>
+                                    <option value="se5">SE-5</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button>Enviar</button>
+                    </div>
+                </div>
+            </div>
             <!-- <button class="modalBtn">Alternar modal</button> -->
         </main>
     </div>

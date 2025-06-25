@@ -30,6 +30,10 @@ function renderTable() {
         <td>${user.origem}</td>
         <td>${user.descricao}</td>
         <td>${user.se}</td>
+        <td id="actions">
+          <button class="BtnEdit">Editar</button>
+          <button>Excluir</button>
+        </td>
       </tr>
     `;
     tableBody.innerHTML += row;
@@ -54,24 +58,46 @@ function prevPage() {
 
 renderTable();
 
-// Modal
-const switchModal = () => {
-    const modal = document.querySelector('.modal')
-    const actualStyle = modal.style.display
+// Modal Novo Cadastro
+const switchModalNew = () => {
+    const modalNew = document.querySelector('.modal-new')
+    const actualStyle = modalNew.style.display
     if(actualStyle == 'block') {
-      modal.style.display = 'none'
+      modalNew.style.display = 'none'
     }
     else {
-      modal.style.display = 'block'
+      modalNew.style.display = 'block'
     }
   }
   
-  const btn = document.querySelector('.modalBtn')
-  btn.addEventListener('click', switchModal)
+  const btnNew = document.querySelector('.BtnNew')
+  btnNew.addEventListener('click', switchModalNew)
   
   window.onclick = function(event) {
-      const modal = document.querySelector('.modal')
-    if (event.target == modal) {
-      switchModal()
+    const modalNew = document.querySelector('.modal-new')
+    if (event.target == modalNew) {
+      switchModalNew()
     }
   }
+
+  //Modal Editar Cadastro
+  // const switchModalEdit = () => {
+  //   const modal = document.querySelector('.modal-edit')
+  //   const actualStyle = modal.style.display
+  //   if(actualStyle == 'block') {
+  //     modal.style.display = 'none'
+  //   }
+  //   else {
+  //     modal.style.display = 'block'
+  //   }
+  // }
+  
+  // const btnEdit = document.querySelector('.BtnEdit')
+  // btnEdit.addEventListener('click', switchModalEdit)
+  
+  // window.onclick = function(event) {
+  //     const modal = document.querySelector('.modal-edit')
+  //   if (event.target == modal) {
+  //     switchModalEdit()
+  //   }
+  // }
